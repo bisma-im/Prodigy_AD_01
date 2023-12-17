@@ -19,10 +19,6 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
     double result;
     TextView res;
 
-    private String getButtonText(Button btn){
-        return btn.getText().toString();
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,23 +80,23 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.add) {
-            if(op.getText().toString() == ""){
+            if (op.getText().toString().equals("")) {
                 op.setText("+");
             }
         } else if (view.getId() == R.id.sub) {
-            if(op.getText().toString() == ""){
+            if (op.getText().toString().equals("")) {
                 op.setText("-");
             }
         } else if (view.getId() == R.id.mul) {
-            if(op.getText().toString() == ""){
+            if (op.getText().toString().equals("")) {
                 op.setText("*");
             }
         } else if (view.getId() == R.id.div) {
-            if(op.getText().toString() == ""){
+            if (op.getText().toString().equals("")) {
                 op.setText("/");
             }
         } else if (view.getId() == R.id.exp) {
-            if(op.getText().toString() == ""){
+            if (op.getText().toString().equals("")) {
                 op.setText("^");
             }
         } else if (view.getId() == R.id.clear) {
